@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         forceCoversAnnotation="false"
+         processIsolation="false"
+         stopOnError="false"
+         stopOnFailure="false"
+         stopOnIncomplete="false"
+         stopOnSkipped="false"
+         stopOnRisky="false"
+         verbose="true"
+         bootstrap="tests/bootstrap.php">
+  <testsuite name="PHPUnit Example Test Suite">
+    <directory suffix="Test.php">tests/UnitTestExample/</directory>
+  </testsuite>
+
+  <logging>
+    <log type="coverage-html" target="build/coverage"/>
+  </logging>
+
+  <filter>
+    <whitelist processUncoveredFilesFromWhitelist="true">
+      <directory suffix=".php">src/UnitTestExample/</directory>
+    </whitelist>
+  </filter>
+</phpunit>
